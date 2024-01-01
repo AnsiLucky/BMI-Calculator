@@ -14,8 +14,6 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
-  console.log([...sexButtons.getElementsByClassName('bg-blue'),
-  ...sexButtons.getElementsByClassName('bg-pink')][0].textContent);
   // Prepare the data to be sent to the server
   const dataToSend = {
     sex: [...sexButtons.getElementsByClassName('bg-blue'),

@@ -4,10 +4,10 @@ const weightUnitSpan = document.getElementById('weightUnitSpan');
 
 unitDropdown.addEventListener('change', function() {
   const selectedUnit = unitDropdown.value;
-  if (selectedUnit === 'cm') {
+  if (selectedUnit === 'metric') {
     heightUnitSpan.textContent = 'cm';
     weightUnitSpan.textContent = 'kg';
-  } else if (selectedUnit === 'inches') {
+  } else if (selectedUnit === 'imperial') {
     heightUnitSpan.textContent = 'in';
     weightUnitSpan.textContent = 'lbs';
   }
