@@ -20,16 +20,19 @@ function readHistory() {
 
 // Route to get BMI history
 router.route('/history')
-.get((req, res) => {
-  res.sendFile(path.join(__dirname, '../views/history.html'));
-})
-.post((req, res) => {
-  try {
-    res.status(200).json(readHistory());
-  } catch (error) {
-    console.log(error);
-    res.send("The error occurs");
-  }
-});
+  // .get((req, res) => {
+  //   res.render(path.join(__dirname, '../views/history.ejs'));
+  // })
+  .get((req, res) => {
+    let dataArray = fs.readFileSync(path.join(__dirname, '../db/bmiHistory.json'), 'utf-8');
+    dataArray = JSON.parse(dataArray);
+    console.log(dataArray);
+    try {
+      res.status(200).render('history', { dataArray });
+    } catch (error) {
+      console.log(error);
+      res.send("The error occurs");
+    }
+  });
 
 module.exports = router;

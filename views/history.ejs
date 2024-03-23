@@ -57,24 +57,54 @@
       <div class="bg-light rounded-5 p-5">
         <div class="h1 text-dark pt-5">History</div>
         <hr width="12%" class="text-center m-auto mb-4">
-          <table class="table">
-            <thead>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Sex</th>
+              <th scope="col">Age</th>
+              <th scope="col">Unit</th>
+              <th scope="col">Height</th>
+              <th scope="col">Weight</th>
+              <th scope="col">BMI</th>
+              <th scope="col">Interpretation</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% dataArray.forEach((data, index)=> { %>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Sex</th>
-                <th scope="col">Age</th>
-                <th scope="col">Unit</th>
-                <th scope="col">Height</th>
-                <th scope="col">Weight</th>
-                <th scope="col">BMI</th>
-                <th scope="col">Interpretation</th>
-                <th scope="col">Date</th>
+                <td>
+                  <%= index + 1 %>
+                </td>
+                <td>
+                  <%= data.sex %>
+                </td>
+                <td>
+                  <%= data.age %>
+                </td>
+                <td>
+                  <%= data.unit %>
+                </td>
+                <td>
+                  <%= data.height %>
+                </td>
+                <td>
+                  <%= data.weight %>
+                </td>
+                <td>
+                  <%= data.bmi %>
+                </td>
+                <td>
+                  <%= data.interpretation %>
+                </td>
+                <td>
+                  <%= data.timestamp %>
+                </td>
               </tr>
-            </thead>
-            <tbody>
-              
-            </tbody>
-          </table>
+              <% }); %>
+          </tbody>
+        </table>
       </div>
   </section>
   <br><br>
@@ -111,4 +141,5 @@
     </div>
   </section>
 </body>
+
 </html>

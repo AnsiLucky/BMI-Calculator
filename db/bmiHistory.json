@@ -1,0 +1,72 @@
+[
+  {
+    "sex": "Male",
+    "age": "18",
+    "unit": "metric",
+    "height": 172,
+    "weight": 50,
+    "bmi": "16.90",
+    "interpretation": "Underweight",
+    "timestamp": "23.01.2024, 14:46:36"
+  },
+  {
+    "sex": "Female",
+    "age": "18",
+    "unit": "metric",
+    "height": 172,
+    "weight": 50,
+    "bmi": "16.90",
+    "interpretation": "Underweight",
+    "timestamp": "23.01.2024, 14:48:15"
+  },
+  {
+    "sex": "Male",
+    "age": "96",
+    "unit": "metric",
+    "height": 180,
+    "weight": 80,
+    "bmi": "24.69",
+    "interpretation": "Normal Range",
+    "timestamp": "23.01.2024, 14:48:47"
+  },
+  {
+    "sex": "Male",
+    "age": "18",
+    "unit": "metric",
+    "height": 173,
+    "weight": 60,
+    "bmi": "20.05",
+    "interpretation": "Normal Range",
+    "timestamp": "26.01.2024, 18:46:30"
+  },
+  {
+    "sex": "Male",
+    "age": "18",
+    "unit": "metric",
+    "height": 173,
+    "weight": 80,
+    "bmi": "26.73",
+    "interpretation": "Overweight",
+    "timestamp": "26.01.2024, 18:46:36"
+  },
+  {
+    "sex": "Male",
+    "age": "18",
+    "unit": "metric",
+    "height": 173,
+    "weight": 100,
+    "bmi": "33.41",
+    "interpretation": "Obese",
+    "timestamp": "26.01.2024, 18:46:40"
+  },
+  {
+    "sex": "Male",
+    "age": "18",
+    "unit": "metric",
+    "height": 173,
+    "weight": 18,
+    "bmi": "6.01",
+    "interpretation": "Underweight",
+    "timestamp": "26.01.2024, 18:46:43"
+  }
+]

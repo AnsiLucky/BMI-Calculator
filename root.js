@@ -1,31 +1,32 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path'); 
-const bmiRoutes = require('./routes/bmiRoutes');
-const historyRoutes = require('./routes/historyRoutes');
+const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path");
+const bmiRoutes = require("./routes/bmiRoutes");
+const historyRoutes = require("./routes/historyRoutes");
 
 // port declaration and initialization
 require("dotenv").config();
 const port = process.env.PORT || 3000;
 
 const app = express();
-
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 // Body parser middleware to handle POST request data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Serve static files from the 'public' directory
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use("/public", express.static(path.join(__dirname, "public")));
 
 // Using the BMI routes from bmiRoutes.js
-app.use('/bmi', bmiRoutes);
+app.use("/bmi", bmiRoutes);
 
 // Using the HISTORY routes from historyRoutes.js
-app.use('/history', historyRoutes);
+app.use("/history", historyRoutes);
 
 // Home route to serve the HTML file
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'index.html'));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "index.html"));
 });
 
 app.listen(port, () => {
